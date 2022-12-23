@@ -5,8 +5,10 @@ public class Main {
 	public static void main(String[] args) {
 		EmployeeWage employeewage =new EmployeeWage();
 		employeewage.print();
-		employeewage.rNum();
-		employeewage.wageMonth();
+		RNum rNum=new RNum();
+		rNum.rNumber();
+		CalWage calWage=new CalWage();
+		calWage.calWage();
 	}
 
 }
