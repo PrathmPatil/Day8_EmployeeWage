@@ -4,7 +4,9 @@ import java.util.Random;
 
 public class EmployeeWage {
   int rNumber;
-  int rNumberPartTime;
+  int present=0;
+  int wagePerHr=20;
+  int hrInDay=8;
 	 public static void print() {
 		 System.out.println("***************Welcome to Employee Wage Computation***************");
 	 }
@@ -13,20 +15,20 @@ public class EmployeeWage {
 	  */
 	 public int rNum() {
 		 Random random =new Random();
-		 rNumber=random.nextInt(2);
-		 return rNumber;
+		 for(int i=0;i<20;i++) {
+			 rNumber=random.nextInt(2);
+			 switch(rNumber) {
+			 case 0: present++;
+			 break;
+			 }
+		 }
+		 return present;
 	 }
-	 public void partFull() {
+	 public void wageMonth() {
 		 EmployeeWage employeewage=new EmployeeWage();
 		 int a=employeewage.rNum();
-		 System.out.println();
-		 switch(a) {
-		 case 0: System.out.println("Employee Do FullTime Work. ");
-		 break;
-		 default:System.out.println("Employee Do PartTime Work. ");
-		 break;
-		 }
-		 System.out.println("Total Wage of the day is "+20*8);
+		 System.out.println(); 
+		 System.out.println("Total Wage of the Month is "+wagePerHr*hrInDay*present);
 	 }
 	 
 }
