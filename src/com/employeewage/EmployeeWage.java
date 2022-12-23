@@ -20,11 +20,11 @@ public class EmployeeWage {
 		 EmployeeWage employeewage=new EmployeeWage();
 		 int a=employeewage.rNum();
 		 System.out.println();
-		 if(a==0) {
-			 System.out.println("Employee Do FullTime Work. ");
-		 }
-		 else {
-			 System.out.println("Employee Do PartTime Work. ");
+		 switch(a) {
+		 case 0: System.out.println("Employee Do FullTime Work. ");
+		 break;
+		 default:System.out.println("Employee Do PartTime Work. ");
+		 break;
 		 }
 		 System.out.println("Total Wage of the day is "+20*8);
 	 }
