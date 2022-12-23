@@ -4,26 +4,29 @@ import java.util.Random;
 
 public class EmployeeWage {
   int rNumber;
+  int rNumberPartTime;
 	 public static void print() {
 		 System.out.println("***************Welcome to Employee Wage Computation***************");
 	 }
-	 public static int rNum() {
-		 EmployeeWage employeewage=new EmployeeWage();
-		 Random random= new Random();
-		 employeewage.rNumber=random.nextInt(2);
-		 return employeewage.rNumber;
+	 /*
+	  * Random number for check part time or full time
+	  */
+	 public int rNum() {
+		 Random random =new Random();
+		 rNumber=random.nextInt(2);
+		 return rNumber;
 	 }
-	 public static void dailyWage() {
+	 public void partFull() {
 		 EmployeeWage employeewage=new EmployeeWage();
 		 int a=employeewage.rNum();
-		 if(a==1) {
-			 int wage=20*8;
-			 System.out.println("Employe are present.");
-			 System.out.println("Total wage of the Days is "+wage);
+		 System.out.println();
+		 if(a==0) {
+			 System.out.println("Employee Do FullTime Work. ");
 		 }
 		 else {
-			 System.out.println("Employe are absent.");
+			 System.out.println("Employee Do PartTime Work. ");
 		 }
-		 
+		 System.out.println("Total Wage of the day is "+20*8);
 	 }
+	 
 }

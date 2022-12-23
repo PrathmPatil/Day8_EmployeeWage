@@ -6,7 +6,7 @@ public class Main {
 		EmployeeWage employeewage =new EmployeeWage();
 		employeewage.print();
 		employeewage.rNum();
-		employeewage.dailyWage();
+		employeewage.partFull();
 	}
 
 }
